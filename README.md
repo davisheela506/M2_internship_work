@@ -102,6 +102,8 @@ At a high level:
                  |
             Evaluation
 ```
+<img width="1140" height="689" alt="openclaw_workflow" src="https://github.com/user-attachments/assets/74079d1e-451b-4548-ae78-e938941f9104" />
+
 
 > **[ADD SYSTEM ARCHITECTURE IMAGE HERE]**
 
