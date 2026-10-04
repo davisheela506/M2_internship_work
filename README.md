@@ -102,7 +102,7 @@ At a high level:
                  |
             Evaluation
 ```
-<img width="1140" height="689" alt="openclaw_workflow" src="https://github.com/user-attachments/assets/74079d1e-451b-4548-ae78-e938941f9104" />
+<img width="1100" height="650" alt="openclaw_workflow" src="https://github.com/user-attachments/assets/74079d1e-451b-4548-ae78-e938941f9104" />
 
 
 The OpenClaw Gateway acted as the central orchestration component. The underlying models were served locally through **Ollama**, allowing different models to be tested without redesigning the complete agent workflow.
@@ -132,7 +132,7 @@ The hardware was important to the project because model selection was constraine
 
 Larger models could not be evaluated because the main ITCL server was allocated to other projects during the experimental period.
 
-<img width="425" height="171" alt="jetson" src="https://github.com/user-attachments/assets/be3c05ab-4133-4aec-b9ec-68aa05e34805" />
+<img width="500" height="200" alt="jetson" src="https://github.com/user-attachments/assets/be3c05ab-4133-4aec-b9ec-68aa05e34805" />
 
 
 ---
