@@ -105,8 +105,6 @@ At a high level:
 <img width="1140" height="689" alt="openclaw_workflow" src="https://github.com/user-attachments/assets/74079d1e-451b-4548-ae78-e938941f9104" />
 
 
-> **[ADD SYSTEM ARCHITECTURE IMAGE HERE]**
-
 The OpenClaw Gateway acted as the central orchestration component. The underlying models were served locally through **Ollama**, allowing different models to be tested without redesigning the complete agent workflow.
 
 The system also included a **FastAPI backend** and a **Streamlit prototype interface** during development.
@@ -134,9 +132,8 @@ The hardware was important to the project because model selection was constraine
 
 Larger models could not be evaluated because the main ITCL server was allocated to other projects during the experimental period.
 
-> **[ADD PHOTO OF JETSON AGX ORIN HERE]**
+<img width="425" height="171" alt="jetson" src="https://github.com/user-attachments/assets/be3c05ab-4133-4aec-b9ec-68aa05e34805" />
 
-> **[ADD JTOP / GPU UTILIZATION SCREENSHOT HERE]**
 
 ---
 
@@ -240,8 +237,6 @@ The workflow was tested using manually generated test messages and scheduled exe
 
 The experiments showed that Gmail could be integrated effectively into the agentic workflow, while credential management and permission control remained important considerations.
 
-> **[ADD GMAIL WORKFLOW SCREENSHOT HERE]**
-
 ---
 
 ## 6.2 Google Calendar
@@ -265,8 +260,6 @@ The integration worked with the test scenarios, while OAuth configuration and pe
 
 Read permissions were tested before enabling write operations to reduce the risk of unintended changes.
 
-> **[ADD GOOGLE CALENDAR SCREENSHOT HERE]**
-
 ---
 
 ## 6.3 JIRA and Calendar Synchronization
@@ -282,8 +275,6 @@ One important issue was observed during the experiment: the agent could generate
 This became a concrete example of the reliability risks associated with giving an agent write access to external systems.
 
 For this reason, validation, confirmation mechanisms, restricted permissions and human approval are important before allowing autonomous modifications to business systems.
-
-> **[ADD JIRA → CALENDAR WORKFLOW IMAGE HERE]**
 
 ---
 
@@ -304,8 +295,6 @@ The integration was restricted to the configured test number.
 Access to the broader contact list, message history and group conversations was not available.
 
 This made WhatsApp useful for simple interaction and notifications, but less suitable for workflows requiring access to broader historical communication data.
-
-> **[ADD WHATSAPP SCREENSHOT HERE]**
 
 ---
 
@@ -343,7 +332,8 @@ The integration required additional OAuth, webhook, network and user-pairing con
 
 It provided an interface suitable for organizations already using Google Workspace.
 
-> **[ADD GOOGLE CHAT SCREENSHOT HERE]**
+<img width="695" height="325" alt="Googlechat" src="https://github.com/user-attachments/assets/396e0ef9-e8d9-4aed-854b-2cb472c06fb6" />
+
 
 ---
 
@@ -453,19 +443,11 @@ The dataset included several image categories:
 
 These categories were intended to capture differences in layout and image conditions.
 
-> **[ADD DATASET EXAMPLES HERE]**
+<img width="1920" height="1080" alt="business_card_dataset" src="https://github.com/user-attachments/assets/b0eee229-1740-421b-84ce-0015307d4ec7" />
 
-Suggested figure:
 
-```text
-+----------------+----------------+----------------+
-| Canvas         | Non-standard   | Real blurred   |
-|                |                |                |
-+----------------+----------------+----------------+
-| Real rotated   | Real sharp     |                |
-|                |                |                |
-+----------------+----------------+----------------+
-```
+<img width="377" height="167" alt="imagescategories" src="https://github.com/user-attachments/assets/a49439c3-af89-45be-9bb7-9fe77117f3cc" />
+
 
 ---
 
@@ -562,7 +544,8 @@ For each prediction, the experimental records included information such as:
 
 A SHA-256 hash was also calculated from the raw image bytes to identify images consistently across the experiments.
 
-> **[ADD EXPERIMENTAL WORKFLOW FIGURE HERE]**
+<img width="1760" height="576" alt="architecture" src="https://github.com/user-attachments/assets/b5447a22-6855-41ae-a009-41256da03642" />
+
 
 ---
 
@@ -631,7 +614,8 @@ However, accuracy alone did not tell the complete story.
 
 Gemma 4 achieved **87.3%** accuracy while also producing a much lower invalid-JSON rate, making it a more balanced option for a structured pipeline.
 
-> **[ADD OVERALL ACCURACY GRAPH HERE]**
+<img width="3271" height="3597" alt="normalized_metrics_dotplot" src="https://github.com/user-attachments/assets/bbb2a46e-961c-41cc-ae54-a726831bae34" />
+
 
 ---
 
@@ -651,7 +635,8 @@ The BERTScore ranking was not identical to the normalized field-accuracy ranking
 
 This is an important result from the experiment: **strict correctness and semantic similarity measure different properties of the output.**
 
-> **[ADD BERTSCORE GRAPH HERE]**
+<img width="2645" height="1472" alt="newbertscore_f1_by_model" src="https://github.com/user-attachments/assets/1feae6be-eab0-4069-b094-de92b6c0f50d" />
+
 
 ---
 
@@ -687,7 +672,8 @@ The results show that model performance depended on the type of information bein
 
 For example, the DeepSeek OCR and rule-based pipeline remained relatively competitive for phone-number extraction, while showing much larger gaps for names, companies and addresses.
 
-> **[ADD FIELD-LEVEL HEATMAP HERE]**
+<img width="3121" height="1624" alt="normalized_field_accuracy_heatmap" src="https://github.com/user-attachments/assets/28faceed-cef3-4fd5-839d-cf1e341f7e4e" />
+
 
 ---
 
@@ -725,7 +711,8 @@ Gemma 4 achieved approximately 75.0%, Qwen3.6 27B approximately 77.3%, and Qwen3
 
 DeepSeek achieved approximately 55.1%.
 
-> **[ADD CATEGORY COMPARISON GRAPH HERE]**
+<img width="2964" height="1624" alt="normalized_accuracy_by_category" src="https://github.com/user-attachments/assets/f5b3c78f-b476-4274-ab4d-e10545731b81" />
+
 
 ---
 
@@ -749,7 +736,8 @@ Qwen3.6 35B-A3B achieved the highest field accuracy, but it also had the highest
 
 This demonstrates why a model cannot be selected based on extraction accuracy alone when its output is intended for an automated structured workflow.
 
-> **[ADD INVALID JSON GRAPH HERE]**
+<img width="3271" height="1323" alt="invalid_json_responses_by_model" src="https://github.com/user-attachments/assets/a55c780d-2032-477f-a2d5-853919ac1675" />
+
 
 ---
 
@@ -773,7 +761,8 @@ Qwen3.6 35B-A3B produced the highest normalized field accuracy but required sign
 
 Ministral 3 provided another balance between response time and extraction accuracy.
 
-> **[ADD RESPONSE TIME GRAPH HERE]**
+<img width="3275" height="1323" alt="average_response_time_by_model" src="https://github.com/user-attachments/assets/cdb3c1e8-b3d2-4fc4-b478-cc8e6ac1ec2c" />
+
 
 ---
 
@@ -971,131 +960,7 @@ The thesis identifies several directions for future work:
 
 ---
 
-# 26. Repository Structure
-
-The repository is organized around the main stages of the project.
-
-```text
-.
-├── README.md
-│
-├── architecture/
-│   ├── system_architecture.png
-│   └── experimental_workflow.png
-│
-├── experiments/
-│   ├── openclaw/
-│   └── business_card_extraction/
-│
-├── evaluation/
-│   ├── ground_truth/
-│   ├── predictions/
-│   ├── normalization/
-│   └── metrics/
-│
-├── results/
-│   ├── accuracy/
-│   ├── bertscore/
-│   ├── json_reliability/
-│   └── response_time/
-│
-├── figures/
-│   ├── dataset_examples.png
-│   ├── accuracy_comparison.png
-│   ├── field_accuracy.png
-│   ├── category_accuracy.png
-│   ├── bertscore.png
-│   ├── invalid_json.png
-│   └── response_time.png
-│
-└── thesis/
-    └── thesis.pdf
-```
-
-*Adjust this structure to match the actual files included in the repository.*
-
----
-
-# 27. Suggested Visuals for This Repository
-
-The repository will benefit from showing the development process rather than only presenting final results.
-
-Recommended figures:
-
-### System and hardware
-
-1. NVIDIA Jetson AGX Orin photo
-2. Jetson `jtop` screenshot
-3. Overall system architecture
-4. OpenClaw Gateway architecture
-
-### Integrations
-
-5. Gmail workflow
-6. Google Calendar workflow
-7. JIRA–Calendar synchronization
-8. WhatsApp interaction
-9. Webchat interface
-10. Google Chat integration
-
-### Model experiments
-
-11. Ollama/model setup
-12. Model response example
-13. JSON extraction example
-14. Invalid JSON example
-
-### Dataset and evaluation
-
-15. Business-card dataset examples
-16. Ground-truth annotation example
-17. End-to-end evaluation workflow
-18. Field-level accuracy heatmap
-19. Accuracy comparison
-20. BERTScore comparison
-21. Image-category comparison
-22. Invalid JSON comparison
-23. Response-time comparison
-
----
-
-# 28. Example Extraction
-
-A successful prediction follows the predefined schema:
-
-```json
-{
-  "name": "...",
-  "job_title": "...",
-  "company": "...",
-  "email": "...",
-  "phone": "...",
-  "address": "...",
-  "website": "..."
-}
-```
-
-The important requirement is that the model should not fill missing information with guesses.
-
-If a field cannot be reliably extracted:
-
-```json
-{
-  "name": "...",
-  "job_title": null,
-  "company": "...",
-  "email": "...",
-  "phone": null,
-  "address": "...",
-  "website": "..."
-}
-```
-
-This behaviour was particularly important for evaluating invented information.
-
----
-
-# 29. Research Outputs
+# 26. Research Outputs
 
 The project resulted in:
 
@@ -1114,7 +979,7 @@ The project resulted in:
 
 ---
 
-# 30. Thesis
+# 27. Thesis
 
 The complete Master's thesis documents the methodology, implementation, experiments, results and analysis in detail.
 
@@ -1133,7 +998,6 @@ The complete Master's thesis documents the methodology, implementation, experime
 
 **Co-supervisor:** Marteyn van Gasteren, ITCL
 
-> **[ADD THESIS PDF LINK HERE]**
 
 ---
 
