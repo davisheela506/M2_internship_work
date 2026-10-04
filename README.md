@@ -313,7 +313,6 @@ Webchat was particularly useful because changes to prompts and workflows could b
 
 However, persistent conversation history and production-level access control remained limitations.
 
-> **[ADD WEBCHAT SCREENSHOT HERE]**
 
 ---
 
@@ -443,10 +442,10 @@ The dataset included several image categories:
 
 These categories were intended to capture differences in layout and image conditions.
 
-<img width="1920" height="1080" alt="business_card_dataset" src="https://github.com/user-attachments/assets/b0eee229-1740-421b-84ce-0015307d4ec7" />
+<img width="400" height="200" alt="business_card_dataset" src="https://github.com/user-attachments/assets/b0eee229-1740-421b-84ce-0015307d4ec7" />
 
 
-<img width="377" height="167" alt="imagescategories" src="https://github.com/user-attachments/assets/a49439c3-af89-45be-9bb7-9fe77117f3cc" />
+<img width="400" height="200" alt="imagescategories" src="https://github.com/user-attachments/assets/a49439c3-af89-45be-9bb7-9fe77117f3cc" />
 
 
 ---
